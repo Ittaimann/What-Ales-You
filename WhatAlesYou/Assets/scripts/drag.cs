@@ -13,6 +13,7 @@ public class drag : MonoBehaviour {
 	private Vector3 screenPoint;
 	private Vector3 offset;
 	private Vector3 originalPosition;
+	private Quaternion originalRotation;
 	private Vector3 cursorPosition;
 	private DragingStatus state;
 
@@ -20,6 +21,7 @@ public class drag : MonoBehaviour {
 	{
 		state = DragingStatus.idle;
 		originalPosition = transform.position;
+		originalRotation = transform.rotation;
 	}
 
 	public void Update()
@@ -41,13 +43,15 @@ public class drag : MonoBehaviour {
 
 			case DragingStatus.returning:
 			{
-				transform.position += offset;
+				transform.position = Vector3.MoveTowards(transform.position, originalPosition, 0.5f);
 				//set the Potion back when it's closer enough to original position
 				if(Vector3.Distance(transform.position,originalPosition) <= 1f)
 				{
-					GetComponent<Rigidbody>().velocity = Vector3.zero;
 					transform.position = originalPosition;
+					transform.rotation = originalRotation;
 					GetComponent<Rigidbody>().useGravity = true;
+					GetComponent<Rigidbody>().velocity = Vector3.zero;
+					GetComponent<Rigidbody>().freezeRotation = true; //Stop!
 					state = DragingStatus.idle;
 				}
 				break;
@@ -65,7 +69,7 @@ public class drag : MonoBehaviour {
 		{
 			state = DragingStatus.draging;
 			GetComponent<Rigidbody>().useGravity = false;
-			
+			GetComponent<Rigidbody>().freezeRotation = false;
 			//calculate the offset
 			screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 			offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
@@ -86,7 +90,6 @@ public class drag : MonoBehaviour {
 
 	public void ReturnBack()
 	{
-		offset = (originalPosition - transform.position)/20;
 		state = DragingStatus.returning;
 	}
 
