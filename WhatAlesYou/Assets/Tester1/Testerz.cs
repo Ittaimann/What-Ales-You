@@ -72,9 +72,9 @@ public partial class @Testerz: Cradle.StoryFormats.Harlowe.HarloweStory
 	{
 		yield return text("Hello, How are you! ");
 		yield return lineBreak();
-		yield return link("Good ", " They Good", null);
+		yield return link("Good ", "They Good", null);
 		yield return lineBreak();
-		yield return link("Bad ", " They Bad", null);
+		yield return link("Bad ", "They Bad", null);
 		yield break;
 	}
 
@@ -84,14 +84,14 @@ public partial class @Testerz: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	void passage2_Init()
 	{
-		this.Passages[@" They Good"] = new StoryPassage(@" They Good", new string[]{  }, passage2_Main);
+		this.Passages[@"They Good"] = new StoryPassage(@"They Good", new string[]{  }, passage2_Main);
 	}
 
 	IStoryThread passage2_Main()
 	{
 		yield return text("That's good! ");
 		yield return lineBreak();
-		yield return link("(Move On) ", " Good End", null);
+		yield return link("(Move On) ", "Good End", null);
 		yield break;
 	}
 
@@ -101,14 +101,14 @@ public partial class @Testerz: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	void passage3_Init()
 	{
-		this.Passages[@" They Bad"] = new StoryPassage(@" They Bad", new string[]{  }, passage3_Main);
+		this.Passages[@"They Bad"] = new StoryPassage(@"They Bad", new string[]{  }, passage3_Main);
 	}
 
 	IStoryThread passage3_Main()
 	{
 		yield return text("I'm sorry you feel that way. I hope you feel better soon!");
 		yield return lineBreak();
-		yield return link("Thank You! ", " Good End", null);
+		yield return link("Thank You! ", "Good End", null);
 		yield break;
 	}
 
@@ -118,14 +118,14 @@ public partial class @Testerz: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	void passage4_Init()
 	{
-		this.Passages[@" Good End"] = new StoryPassage(@" Good End", new string[]{  }, passage4_Main);
+		this.Passages[@"Good End"] = new StoryPassage(@"Good End", new string[]{  }, passage4_Main);
 	}
 
 	IStoryThread passage4_Main()
 	{
 		yield return text("Good-Bye and have a wonderful day!");
 		yield return lineBreak();
-		yield return link("(Leave) |", " Ending", null);
+		yield return link("(Leave)", "Ending", null);
 		yield break;
 	}
 
@@ -135,7 +135,7 @@ public partial class @Testerz: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	void passage5_Init()
 	{
-		this.Passages[@" Ending"] = new StoryPassage(@" Ending", new string[]{  }, passage5_Main);
+		this.Passages[@"Ending"] = new StoryPassage(@"Ending", new string[]{  }, passage5_Main);
 	}
 
 	IStoryThread passage5_Main()

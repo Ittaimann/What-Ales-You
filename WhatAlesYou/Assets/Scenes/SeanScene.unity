@@ -660,6 +660,18 @@ Prefab:
       propertyPath: m_Inertia
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22453724, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 453732, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471642, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
   m_IsPrefabParent: 0
