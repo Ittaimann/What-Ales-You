@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cradle;
+using UnityEngine.UI;
 
 public class TesterzCues : MonoBehaviour {
 
@@ -15,19 +16,19 @@ public class TesterzCues : MonoBehaviour {
 	[StoryCue("They Good", "Enter")]
 	void enterGood()
 	{
-		Camera.main.backgroundColor = Color.yellow;
+		//story.GetComponent<Image>().color = Color.yellow;
 	}
 
 	[StoryCue("They Bad", "Enter")]
 	void enterBad()
 	{
-		Camera.main.backgroundColor = Color.blue;
+		//story.GetComponent<Image>().color = Color.blue;
 	}
 
 	[StoryCue("Ending", "Enter")]
 	void enterEnd()
 	{
-		Camera.main.backgroundColor = Color.black;
+		//story.GetComponent<Image>().color = Color.black;
 	}
 	// Update is called once per frame
 	void Update () {
