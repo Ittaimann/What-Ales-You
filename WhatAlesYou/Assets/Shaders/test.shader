@@ -16,10 +16,10 @@
  
     SubShader
     {
-        Tags {"Queue"="Geometry"  "DisableBatching" = "True" }
  
-                Pass
+        Pass
         {
+		Tags {"Queue"="Geometry"  "DisableBatching" = "True" }
          Zwrite On
          Cull Off // we want the front and back faces
          AlphaToMask On // transparency
@@ -120,6 +120,11 @@
          }
          ENDCG
         }
+		
  
     }
+	
+      
+ 
+    
 }
