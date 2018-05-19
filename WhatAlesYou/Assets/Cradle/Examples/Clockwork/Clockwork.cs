@@ -5,7 +5,6 @@ https://github.com/daterre/Cradle
 
 Original file: Clockwork.html
 Story format: Harlowe
-//*Example to look at
 ------------------------------------------------
 */
 
