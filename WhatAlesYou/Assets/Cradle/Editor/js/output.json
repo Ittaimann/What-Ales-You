@@ -1,0 +1,213 @@
+{
+    "console": [],
+    "result": {
+        "passages": [
+            {
+                "Name": "Start",
+                "Pid": "1",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "Hello, How are you! ",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Good \",\" They Good\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Good \",\" They Good\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Good ",
+                                "text": "\"Good \"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": " They Good",
+                                "text": "\" They Good\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Bad \",\" They Bad\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Bad \",\" They Bad\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Bad ",
+                                "text": "\"Bad \"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": " They Bad",
+                                "text": "\" They Bad\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": " They Good",
+                "Pid": "2",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "That's good! ",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"(Move On) \",\" Good End\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"(Move On) \",\" Good End\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "(Move On) ",
+                                "text": "\"(Move On) \"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": " Good End",
+                                "text": "\" Good End\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": " They Bad",
+                "Pid": "3",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "I'm sorry you feel that way. I hope you feel better soon!",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Thank You! \",\" Good End\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Thank You! \",\" Good End\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Thank You! ",
+                                "text": "\"Thank You! \"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": " Good End",
+                                "text": "\" Good End\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": " Good End",
+                "Pid": "4",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "Good-Bye and have a wonderful day!",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"(Leave) |\",\" Ending\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"(Leave) |\",\" Ending\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "(Leave) |",
+                                "text": "\"(Leave) |\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": " Ending",
+                                "text": "\" Ending\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": " Ending",
+                "Pid": "5",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "THE END",
+                        "type": "text"
+                    }
+                ]
+            }
+        ],
+        "startPid": "1"
+    }
+}
