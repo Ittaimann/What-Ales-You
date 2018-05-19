@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30b6575ae11f57f4995b1cd407c34485
+guid: da942b6453b9cdf4487f47b1c5b1ad42
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -8,8 +8,7 @@ ModelImporter:
     2100000: phong1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube1
-    4300002: pPlane1
+    4300000: pCylinder2
   externalObjects: {}
   materials:
     importMaterials: 1
