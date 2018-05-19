@@ -9,13 +9,13 @@ public class mixer : MonoBehaviour {
 
 	public void Update()
 	{
-		//just for test
-		if(Input.GetKeyDown(KeyCode.A))
-		{
-			GetContent();
-			CleanContent();
-		}
+		
 	}
+	
+//========================================================================================================
+//Modify Contents
+//========================================================================================================
+
 	public void AddContent(string contentName)
 	{
 		if(!contents.ContainsKey(contentName))
@@ -43,6 +43,10 @@ public class mixer : MonoBehaviour {
 		return contents;
 	}
 
+//========================================================================================================
+//Check adding position
+//========================================================================================================
+
 	public void OnTriggerEnter(Collider other)
 	{
 		if(other.tag == "Potion" && other.gameObject.GetComponent<drag>().GetStatus() == DragingStatus.draging)
@@ -68,6 +72,29 @@ public class mixer : MonoBehaviour {
 	public void OnTriggerExit(Collider other)
 	{
 		checkAdding = false;
+	}
+//========================================================================================================
+//Deliver drink to customer
+//========================================================================================================
+	public void OnMouseUp()
+	{
+		DeliverDrink();
+	}
+
+	private void DeliverDrink()
+	{
+		RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		GetComponent<Collider>().enabled = false;
+        if (Physics.Raycast(ray, out hit)) 
+		{
+            if (hit.transform.gameObject.tag == "Customer")
+			{
+ 				GetContent();
+				CleanContent();	
+			}
+		}
+		GetComponent<Collider>().enabled = true;
 	}
 
 }

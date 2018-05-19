@@ -16,12 +16,14 @@ public class drag : MonoBehaviour {
 	private Quaternion originalRotation;
 	private Vector3 cursorPosition;
 	private DragingStatus state;
+	private bool originalGravity;
 
 	public void Start()
 	{
 		state = DragingStatus.idle;
 		originalPosition = transform.position;
 		originalRotation = transform.rotation;
+		originalGravity = GetComponent<Rigidbody>().useGravity;
 	}
 
 	public void Update()
@@ -49,7 +51,7 @@ public class drag : MonoBehaviour {
 				{
 					transform.position = originalPosition;
 					transform.rotation = originalRotation;
-					GetComponent<Rigidbody>().useGravity = true;
+					GetComponent<Rigidbody>().useGravity = originalGravity;
 					GetComponent<Rigidbody>().velocity = Vector3.zero;
 					GetComponent<Rigidbody>().freezeRotation = true; //Stop!
 					state = DragingStatus.idle;
