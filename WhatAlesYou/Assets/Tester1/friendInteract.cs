@@ -6,23 +6,24 @@ using Cradle;
 
 public class friendInteract : MonoBehaviour {
 	//there are going to be n story objects to transition in twine
-	public Story story1;
-	public Story story2;
-
+	public Story story1, story2, story3, story4, 
+	story5, story6, story7, story8, story9;
 	//there are n twineplayers for the story objects
-	public GameObject twinePlayer1;
-	public GameObject twinePlayer2;
+	public GameObject twinePlayer1, twinePlayer2, twinePlayer3,
+	twinePlayer4, twinePlayer5, twinePlayer6, twinePlayer7,
+	twinePlayer8, twinePlayer9;
 
 	//there are n backgrounds for the dialogue boxes
-	public GameObject background1;
-	public GameObject background2;
+	public GameObject background1, background2, background3, background4,
+	background5, background6, background7, background8, background9;
 
 	public bool customerInteract = false; //if we initiated contact
 	public bool waitingDrink = false; //if they ordered drink and wait for player
 	public bool isPaused = false;
 
-	public bool passageOneDone = false; //if story 1 is done
-	public bool passageTwoRun = false; // if stroy 2 is running
+	private bool passageOneDone = false; //if story 1 is done
+	private bool passageTwoRun = false; // if stroy 2 is running
+	//will need to add more bools here
 
 	// Use this for initialization
 	void Start () {
@@ -69,7 +70,7 @@ public class friendInteract : MonoBehaviour {
 
 	//triggered when we hand the customer their drink.
 	//we will start the next block of dialogue.
-	void gaveDrink()
+	public void gaveDrink()
 	{
 		//start next dialogue
 		twinePlayer2.GetComponent<TwineTextPlayer>().AutoDisplay = true;
