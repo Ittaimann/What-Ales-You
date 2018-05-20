@@ -6,6 +6,7 @@ public class mixer : MonoBehaviour {
 	private Dictionary<string, int> contents = new Dictionary<string, int>();
 	private bool checkAdding = false;//if should check should or should not add potion
 	private bool canDeliver = false;
+	public GameObject customer;
 	// Use this for initialization
 
 	public void Update()
@@ -59,8 +60,8 @@ public class mixer : MonoBehaviour {
 
 	public void OnTriggerStay(Collider other)
 	{
-		Debug.Log(checkAdding && other.tag == "Potion");
-		if(checkAdding && other.tag == "Potion" && other.gameObject.GetComponent<drag>().GetStatus() == DragingStatus.returning)
+		//Debug.Log(checkAdding && other.tag == "Potion");
+		if(checkAdding && other.tag == "Potion" && other.gameObject.GetComponent<drag>().GetStatus() == DragingStatus.checking)
 		//Potion starts to return, means mouse up, add that to mixer and change potion's state
 		{
 			checkAdding = false;
@@ -102,7 +103,7 @@ public class mixer : MonoBehaviour {
 			GameObject hitObject = hit.transform.gameObject;
             if (hitObject.tag == "Customer")
 			{
- 				GameObject.Find("Manager").GetComponent<DrinkRequirment>().ProcessDrink(GetContent());
+ 				customer.GetComponent<DrinkRequirment>().ProcessDrink(GetContent());
 				CleanContent();	
 				canDeliver = false;
 			}

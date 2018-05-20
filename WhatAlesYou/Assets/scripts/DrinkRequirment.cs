@@ -16,6 +16,7 @@ public class DrinkRequirment : MonoBehaviour {
 			++index;
 			//continue the story by the score
 			Debug.Log(score);
+			gameObject.GetComponent<friendInteract>().gaveDrink();
 		}
 		
 	}
@@ -39,11 +40,11 @@ public class DrinkRequirment : MonoBehaviour {
 	//get a dictionary and translate that to a drinkInfo
 	{
 		Dictionary<string, int> info = new Dictionary<string, int>();
-		info.Add("Potion", drink.indigrent1);
-		info.Add("Apple", drink.indigrent2);
-		info.Add("Sth", drink.indigrent3);
-		info.Add("4", drink.indigrent4);
-		info.Add("5", drink.indigrent5);
+		info.Add("Potion", drink.ingredient1);
+		info.Add("Apple", drink.ingredient2);
+		info.Add("Sth", drink.ingredient3);
+		info.Add("4", drink.ingredient4);
+		info.Add("5", drink.ingredient5);
 
 		return info;
 	}
@@ -53,10 +54,10 @@ public class DrinkRequirment : MonoBehaviour {
 [System.Serializable]
 public class DrinkInfo
 {
-	public int indigrent1 = 0;
-	public int indigrent2 = 0;
-	public int indigrent3 = 0;
-	public int indigrent4 = 0;
-	public int indigrent5 = 0;
+	public int ingredient1 = 0;
+	public int ingredient2 = 0;
+	public int ingredient3 = 0;
+	public int ingredient4 = 0;
+	public int ingredient5 = 0;
 
 }

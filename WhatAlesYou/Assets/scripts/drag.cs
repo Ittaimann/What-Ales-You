@@ -6,6 +6,7 @@ public enum DragingStatus
 {
 		idle,
 		draging,
+		checking,
 		returning
 }
 public class drag : MonoBehaviour {
@@ -15,7 +16,7 @@ public class drag : MonoBehaviour {
 	private Vector3 originalPosition;
 	private Quaternion originalRotation;
 	private Vector3 cursorPosition;
-	private DragingStatus state;
+	public DragingStatus state;
 	private bool originalGravity;
 
 	public void Start()
@@ -45,9 +46,9 @@ public class drag : MonoBehaviour {
 
 			case DragingStatus.returning:
 			{
-				transform.position = Vector3.MoveTowards(transform.position, originalPosition, 0.5f);
+				transform.position = Vector3.MoveTowards(transform.position, originalPosition, 0.3f);
 				//set the Potion back when it's closer enough to original position
-				if(Vector3.Distance(transform.position,originalPosition) <= 1f)
+				if(Vector3.Distance(transform.position,originalPosition) <= 0.5f)
 				{
 					transform.position = originalPosition;
 					transform.rotation = originalRotation;
@@ -86,15 +87,20 @@ public class drag : MonoBehaviour {
 	{
 		if(state == DragingStatus.draging)
 		{
-			ReturnBack();
+			CheckBack();
 		}
+	}
+
+	public void CheckBack()
+	{
+		state = DragingStatus.checking;
+		Invoke("ReturnBack", 0.1f);
 	}
 
 	public void ReturnBack()
 	{
 		state = DragingStatus.returning;
 	}
-
 	public DragingStatus GetStatus()
 	{
 		return state;
