@@ -3,12 +3,244 @@
     "result": {
         "passages": [
             {
-                "Name": "Untitled Passage",
+                "Name": "Start",
                 "Pid": "1",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Double-click this passage to edit it.",
+                        "text": "A barbarian and an orc walk into a bar...",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"continue\",\"continue\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"continue\",\"continue\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "continue",
+                                "text": "\"continue\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "continue",
+                                "text": "\"continue\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "continue",
+                "Pid": "2",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "Stefan the Barbarian: And there I was, traveling up the mountainside, when a giant beast arose from the ground. It was as tall as a mountain, it was-",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "Gustav: You disturbed the rest of a stone giant you imbecile.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "Stefan: Sir, you deeply offend me. I bravely fought a stone giant.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "Gustave: Stone giants are peaceful unless you go clunking around on top of them.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Could you guys maybe keep it down?\",\"Exit Gustav\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Could you guys maybe keep it down?\",\"Exit Gustav\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Could you guys maybe keep it down?",
+                                "text": "\"Could you guys maybe keep it down?\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Exit Gustav",
+                                "text": "\"Exit Gustav\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"The Stone Giants are somewhat peaceful.\",\"Exit Gustav\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"The Stone Giants are somewhat peaceful.\",\"Exit Gustav\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "The Stone Giants are somewhat peaceful.",
+                                "text": "\"The Stone Giants are somewhat peaceful.\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Exit Gustav",
+                                "text": "\"Exit Gustav\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"It’s just a story, Gustav.\",\"Exit Gustav\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"It’s just a story, Gustav.\",\"Exit Gustav\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "It’s just a story, Gustav.",
+                                "text": "\"It’s just a story, Gustav.\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Exit Gustav",
+                                "text": "\"Exit Gustav\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Watch\",\"Exit Gustav\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Watch\",\"Exit Gustav\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Watch",
+                                "text": "\"Watch\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Exit Gustav",
+                                "text": "\"Exit Gustav\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    }
+                ]
+            },
+            {
+                "Name": "Exit Gustav",
+                "Pid": "3",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "Stefan: I even took home some nifty ancient tablet. I'm sure it's worth a fortune.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "Gustav sighs, clearly having had enough of this.",
                         "type": "text"
                     }
                 ]

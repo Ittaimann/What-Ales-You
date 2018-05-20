@@ -6,7 +6,7 @@ public class TitleManager : MonoBehaviour {
 
 	public void StartGameButton()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("SeanScene");
     }
 
 }
