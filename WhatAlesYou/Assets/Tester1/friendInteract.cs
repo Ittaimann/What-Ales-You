@@ -33,6 +33,14 @@ public class friendInteract : MonoBehaviour {
 	void Start () {
 		background1.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
 		background2.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+		background3.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+		//background4.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+		//background5.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+		//background6.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+		//background7.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+		//background8.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+		//background9.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+
 	}
 
 	//when u click on friend, this object will pop up the dialogue.
@@ -129,11 +137,10 @@ public class friendInteract : MonoBehaviour {
     // Update is called once per frame 
     void Update () {
 		//if the intro block is done
-		if (twinePlayer1.GetComponent<TwineTextPlayer>().StartStory && story1.CurrentPassage.Name == "new" && Input.GetKeyDown(KeyCode.Mouse0))
+		if (twinePlayer1.GetComponent<TwineTextPlayer>().StartStory && story1.CurrentPassage.Name == "Exit Gustav" && Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			passageOneDone = true;
 			steve.GetComponent<AnimationManager>().RotateAndWalk(0, Direction.right, 2);
-			gus.GetComponent<AnimationManager>().RotateAndWalk(0, Direction.left, 2);
 		}
 
 
