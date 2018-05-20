@@ -5009,8 +5009,8 @@ GameObject:
   - component: {fileID: 1582382028}
   - component: {fileID: 1582382032}
   - component: {fileID: 1582382031}
-  - component: {fileID: 1582382033}
   - component: {fileID: 1582382034}
+  - component: {fileID: 1582382033}
   m_Layer: 0
   m_Name: MixingCannister
   m_TagString: Mixer
@@ -5097,8 +5097,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750c24c5b1a294b4689d4a6f742a2c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &1582382033
-CapsuleCollider:
+--- !u!65 &1582382033
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5106,10 +5106,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.22016186
-  m_Height: 0.6975455
-  m_Direction: 1
-  m_Center: {x: 0.000000022351742, y: 0, z: -0.000000037252903}
+  serializedVersion: 2
+  m_Size: {x: 0.27882913, y: 0.49836195, z: 0.24287605}
+  m_Center: {x: 0.0018585473, y: 0.03801471, z: -0.010233402}
 --- !u!54 &1582382034
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5782,8 +5781,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4368889, y: 0.34108984, z: 0.82418257}
-  m_Center: {x: 0, y: -0.029455079, z: -0.082253315}
+  m_Size: {x: 0.39897177, y: 0.33917353, z: 0.82418257}
+  m_Center: {x: 0.00024465917, y: -0.030413235, z: -0.082253315}
 --- !u!1001 &1861514505
 Prefab:
   m_ObjectHideFlags: 0
