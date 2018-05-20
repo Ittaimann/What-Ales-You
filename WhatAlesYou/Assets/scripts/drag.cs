@@ -11,6 +11,7 @@ public enum DragingStatus
 }
 public class drag : MonoBehaviour {
 	
+
 	private Vector3 screenPoint;
 	private Vector3 offset;
 	private Vector3 originalPosition;

@@ -11,6 +11,7 @@ public class mixer : MonoBehaviour {
     //public GameObject theCamera;
     public AudioClip mixingSE;
     public AudioClip deliverSE;
+    //public AudioClip collideSE;
 	// Use this for initialization
 
 	public void Update()
@@ -61,6 +62,11 @@ public class mixer : MonoBehaviour {
 		{
 			checkAdding = true;
 		}
+        /*
+        if(other.gameObject.name == "Bar")
+        {
+            AudioSource.PlayClipAtPoint(collideSE, transform.position);
+        }*/
 	}
 
 	public void OnTriggerStay(Collider other)

@@ -1353,6 +1353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: Poison
+  hitSE: {fileID: 8300000, guid: 4251da530256c2d4ebbe5b9439ffe0d1, type: 3}
 --- !u!54 &415121658
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1984,7 +1985,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22453726, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000034970722
+      value: -0.000056046298
       objectReference: {fileID: 0}
     - target: {fileID: 11453716, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: StartStory
@@ -3038,6 +3039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: Poison
+  hitSE: {fileID: 8300000, guid: 4251da530256c2d4ebbe5b9439ffe0d1, type: 3}
 --- !u!54 &914858291
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4071,6 +4073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: Poison
+  hitSE: {fileID: 8300000, guid: 4251da530256c2d4ebbe5b9439ffe0d1, type: 3}
 --- !u!54 &1254058111
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4806,6 +4809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: Poison
+  hitSE: {fileID: 8300000, guid: 4251da530256c2d4ebbe5b9439ffe0d1, type: 3}
 --- !u!54 &1429237874
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5449,6 +5453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: Poison
+  hitSE: {fileID: 8300000, guid: 4251da530256c2d4ebbe5b9439ffe0d1, type: 3}
 --- !u!54 &1580586459
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5602,7 +5607,7 @@ Transform:
   m_PrefabInternal: {fileID: 1937971126}
   m_GameObject: {fileID: 1582382027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0241528, y: -1.0338991, z: 0.1507597}
+  m_LocalPosition: {x: -1.0241528, y: -1.024, z: 0.1507597}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 270393038}
@@ -5633,7 +5638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customer: {fileID: 117939328}
   mixingSE: {fileID: 8300000, guid: 8c4c09b72dc2d8c44bd0f808437c15e8, type: 3}
-  deliverSE: {fileID: 8300000, guid: 2c18d14466cee2644861083cb16eb8ff, type: 3}
+  deliverSE: {fileID: 8300000, guid: cad577e4eb8910c448a432e158d30835, type: 3}
 --- !u!65 &1582382033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6874,7 +6879,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: da942b6453b9cdf4487f47b1c5b1ad42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0338991
+      value: -1.024
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: da942b6453b9cdf4487f47b1c5b1ad42, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7156,7 +7161,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22453726, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000034970722
+      value: -0.000056046298
       objectReference: {fileID: 0}
     - target: {fileID: 11471642, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_Horizontal
