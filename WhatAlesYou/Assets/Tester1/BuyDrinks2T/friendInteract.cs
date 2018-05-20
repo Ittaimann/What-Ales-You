@@ -5,21 +5,24 @@ using UnityEngine.UI;
 using Cradle;
 
 public class friendInteract : MonoBehaviour {
+	//there are going to be n story objects to transition in twine
 	public Story story1;
 	public Story story2;
+
+	//there are n twineplayers for the story objects
 	public GameObject twinePlayer1;
 	public GameObject twinePlayer2;
+
+	//there are n backgrounds for the dialogue boxes
 	public GameObject background1;
 	public GameObject background2;
-
-	public StoryOutput cout;
 
 	public bool customerInteract = false; //if we initiated contact
 	public bool waitingDrink = false; //if they ordered drink and wait for player
 	public bool isPaused = false;
 
-	public bool passageOneDone = false;
-	public bool passageTwoRun = false;
+	public bool passageOneDone = false; //if story 1 is done
+	public bool passageTwoRun = false; // if stroy 2 is running
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +44,7 @@ public class friendInteract : MonoBehaviour {
 			twinePlayer1.GetComponent<TwineTextPlayer>().StartStory = true;
 			background1.GetComponent<RectTransform>().localScale = new Vector3(0.8f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
 
+			//start the beginning of the story when click player
 			if (twinePlayer1.GetComponent<TwineTextPlayer>().AutoDisplay)
 			{
 				story1.Begin();
