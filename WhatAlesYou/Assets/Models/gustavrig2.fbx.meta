@@ -54,6 +54,7 @@ ModelImporter:
     400046: QuickRigCharacter_Spine1
     400048: QuickRigCharacter_Spine2
     2100000: phong1
+    2100002: phong2
     4300000: polySurface1
     9500000: //RootNode
     13700000: polySurface1
