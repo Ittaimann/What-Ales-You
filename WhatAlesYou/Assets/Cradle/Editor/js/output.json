@@ -3,53 +3,12 @@
     "result": {
         "passages": [
             {
-                "Name": "2Start",
+                "Name": "Untitled Passage",
                 "Pid": "1",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Ah, thank you so much!",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Anytime lovely patron!\",\"2End\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Anytime lovely patron!\",\"2End\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Anytime lovely patron!",
-                                "text": "\"Anytime lovely patron!\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "2End",
-                                "text": "\"2End\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "2End",
-                "Pid": "2",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "The End",
+                        "text": "Double-click this passage to edit it.",
                         "type": "text"
                     }
                 ]

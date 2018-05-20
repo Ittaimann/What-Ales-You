@@ -95,7 +95,7 @@ public class mixer : MonoBehaviour {
 		if(canDeliver)
 		{
 			DeliverDrink();
-			canDeliver = false;
+			//canDeliver = false;
 		}
 	}
 
@@ -112,9 +112,9 @@ public class mixer : MonoBehaviour {
         if (Physics.Raycast(ray, out hit)) 
 		{
 			GameObject hitObject = hit.transform.gameObject;
-            if (hitObject == customer)
+            if (hitObject.tag == "Customer")
 			{
- 				customer.GetComponent<DrinkRequirment>().ProcessDrink(GetContent());
+ 				hitObject.GetComponent<DrinkRequirment>().ProcessDrink(GetContent());
                 AudioSource.PlayClipAtPoint(deliverSE, transform.position);
                 CleanContent();	
 				canDeliver = false;
