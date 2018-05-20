@@ -35,7 +35,13 @@ public class DrinkRequirment : MonoBehaviour {
 				score -= required[key];
 			}
 		}*/
-		return drink["Poison"];
+		int score = 0;
+		if(drink.ContainsKey("Posion")){
+			score = 1;
+		}else{
+			score = 0;
+		}
+		return score;
 	}
 
 	private Dictionary<string, int> ToDrinkDict(DrinkInfo drink)
