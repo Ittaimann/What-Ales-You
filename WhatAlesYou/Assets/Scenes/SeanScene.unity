@@ -3010,7 +3010,7 @@ GameObject:
   - component: {fileID: 757684106}
   m_Layer: 0
   m_Name: steverig2
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3110,6 +3110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d750761c2350c42be974f6e8e438c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  friendInteract: {fileID: 757684106}
   quests:
   - ingredient1: 0
     ingredient2: 0
@@ -7746,7 +7747,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22453726, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00003050746
+      value: 0.000002764836
       objectReference: {fileID: 0}
     - target: {fileID: 11453718, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_Color.a
@@ -8051,6 +8052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d750761c2350c42be974f6e8e438c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  friendInteract: {fileID: 0}
   quests:
   - ingredient1: 1
     ingredient2: 1
