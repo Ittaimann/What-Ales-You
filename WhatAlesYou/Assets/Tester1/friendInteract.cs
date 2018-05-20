@@ -26,7 +26,6 @@ public class friendInteract : MonoBehaviour {
 	int drinkCount = 0;
 
 	private bool passageOneDone = false; //if story 1 is done
-	private bool passageTwoRun = false; // if stroy 2 is running
 	//will need to add more bools here
 
 	// Use this for initialization
@@ -87,10 +86,10 @@ public class friendInteract : MonoBehaviour {
 		if (drinkCount == 0)
 		{
 			//dialogue gave first drink to Stephan
-			twinePlayer2.GetComponent<TwineTextPlayer>().AutoDisplay = true;
-       		twinePlayer2.GetComponent<TwineTextPlayer>().StartStory = true;
-       		background2.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
-			story2.Begin();
+			twinePlayer3.GetComponent<TwineTextPlayer>().AutoDisplay = true;
+       		twinePlayer3.GetComponent<TwineTextPlayer>().StartStory = true;
+       		background3.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
+			story3.Begin();
 
 			drinkCount++;
 		}
@@ -133,6 +132,13 @@ public class friendInteract : MonoBehaviour {
 
 	}
 
+	public void StartStory2()
+	{
+		twinePlayer2.GetComponent<TwineTextPlayer>().AutoDisplay = true;
+       	twinePlayer2.GetComponent<TwineTextPlayer>().StartStory = true;
+       	background2.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
+		story2.Begin();
+	}
 
     // Update is called once per frame 
     void Update () {
@@ -140,7 +146,18 @@ public class friendInteract : MonoBehaviour {
 		if (twinePlayer1.GetComponent<TwineTextPlayer>().StartStory && story1.CurrentPassage.Name == "Exit Gustav" && Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			passageOneDone = true;
-			steve.GetComponent<AnimationManager>().RotateAndWalk(0, Direction.right, 2);
+			gus.GetComponent<AnimationManager>().RotateAndWalk(0, Direction.right, 2);
+			Invoke("StartStory2", 2f);
+		}
+
+		if (twinePlayer2.GetComponent<TwineTextPlayer>().StartStory && story2.CurrentPassage.Name == "Start" && Input.GetKeyDown(KeyCode.Mouse0))
+		{
+			//transitions to the next block of dialogue in game;
+			twinePlayer2.SetActive(false);
+			twinePlayer2.GetComponent<TwineTextPlayer>().StartStory = false;
+
+			//enable the mixer to mix drink
+			mixer.GetComponent<mixer>().StartDeliverCheck();
 		}
 
 
@@ -149,15 +166,9 @@ public class friendInteract : MonoBehaviour {
 		if (passageOneDone)
 		{
 			//transitions to the next block of dialogue in game
-
 			passageOneDone = false;
 			twinePlayer1.SetActive(false);
 			twinePlayer1.GetComponent<TwineTextPlayer>().StartStory = false;
-
-			//enable the mixer to mix drink
-			mixer.GetComponent<mixer>().StartDeliverCheck();
-
-			//passageTwoRun = true;
 		}
 	}
 }
