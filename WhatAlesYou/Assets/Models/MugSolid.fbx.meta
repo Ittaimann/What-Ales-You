@@ -1,14 +1,26 @@
 fileFormatVersion: 2
-guid: daef35d989ea58347a6785cf83424f02
+guid: e03c08b252828e54b80e83f41acdcf9d
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: group
+    100004: pasted__pCylinder1
+    100006: pCylinder1
     400000: //RootNode
+    400002: group
+    400004: pasted__pCylinder1
+    400006: pCylinder1
     2100000: phong1
+    2100002: pasted__phong1
     2300000: //RootNode
+    2300002: pasted__pCylinder1
+    2300004: pCylinder1
     3300000: //RootNode
+    3300002: pasted__pCylinder1
+    3300004: pCylinder1
     4300000: pCylinder1
+    4300002: pasted__pCylinder1
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

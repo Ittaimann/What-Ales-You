@@ -3,12 +3,12 @@
     "result": {
         "passages": [
             {
-                "Name": "Start",
+                "Name": "2Start",
                 "Pid": "1",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Hello, How are you! ",
+                        "text": "Ah, thank you so much!",
                         "type": "text"
                     },
                     {
@@ -16,17 +16,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Good \",\" They Good\"",
+                        "innerText": "link-goto:\"Anytime lovely patron!\",\"2End\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Good \",\" They Good\")",
+                        "text": "(link-goto:\"Anytime lovely patron!\",\"2End\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Good ",
-                                "text": "\"Good \"",
+                                "innerText": "Anytime lovely patron!",
+                                "text": "\"Anytime lovely patron!\"",
                                 "type": "string"
                             },
                             {
@@ -34,38 +34,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": " They Good",
-                                "text": "\" They Good\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Bad \",\" They Bad\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Bad \",\" They Bad\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Bad ",
-                                "text": "\"Bad \"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": " They Bad",
-                                "text": "\" They Bad\"",
+                                "innerText": "2End",
+                                "text": "\"2End\"",
                                 "type": "string"
                             }
                         ],
@@ -74,135 +44,12 @@
                 ]
             },
             {
-                "Name": " They Good",
+                "Name": "2End",
                 "Pid": "2",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "That's good! ",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"(Move On) \",\" Good End\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"(Move On) \",\" Good End\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "(Move On) ",
-                                "text": "\"(Move On) \"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": " Good End",
-                                "text": "\" Good End\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": " They Bad",
-                "Pid": "3",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "I'm sorry you feel that way. I hope you feel better soon!",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Thank You! \",\" Good End\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Thank You! \",\" Good End\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Thank You! ",
-                                "text": "\"Thank You! \"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": " Good End",
-                                "text": "\" Good End\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": " Good End",
-                "Pid": "4",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "Good-Bye and have a wonderful day!",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"(Leave) |\",\" Ending\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"(Leave) |\",\" Ending\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "(Leave) |",
-                                "text": "\"(Leave) |\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": " Ending",
-                                "text": "\" Ending\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": " Ending",
-                "Pid": "5",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "THE END",
+                        "text": "The End",
                         "type": "text"
                     }
                 ]

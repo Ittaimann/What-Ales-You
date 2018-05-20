@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 16f6faf503c5d9a4b97b221ddcf79f0a
+guid: f289d148b6753e445b525409dc3d64cf
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: phong1
+    2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCylinder2
+    4300000: pCylinder1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 20
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
