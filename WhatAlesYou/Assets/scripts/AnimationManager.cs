@@ -7,9 +7,18 @@ public class AnimationManager : MonoBehaviour {
 	
 	public void Start()
 	{
-		//SitDown();
-		Pose();
+		//StartCoroutine(Test());
+	}
 
+	public IEnumerator Test()
+	{
+		SitDown();
+		yield return new WaitForSeconds(1f);
+		StandUp();
+		yield return new WaitForSeconds(1f);
+		Greet();
+		yield return new WaitForSeconds(3f);
+		Ashamed();
 	}
 
 	public void SitDown()
@@ -17,6 +26,10 @@ public class AnimationManager : MonoBehaviour {
 		GetComponent<Animator>().SetBool("IsSitting", true);
 	}
 
+	public void StandUp()
+	{
+		GetComponent<Animator>().SetBool("IsSitting", false);
+	}
 	public void Drink()
 	{
 		StartCoroutine(Trigger("IsDrinking", 0.1f));
@@ -24,13 +37,15 @@ public class AnimationManager : MonoBehaviour {
 
 	public void Ashamed()
 	{
-		GetComponent<Animator>().SetBool("IsRefusing", false);
 		StartCoroutine(Trigger("IsAshamed", 0.1f));
 	}
 
+	public void NodeOnce()
+	{
+		StartCoroutine(Trigger("IsRefusing", 0.1f));
+	}
 	public void StartNodding()
 	{
-		GetComponent<Animator>().SetBool("IsAshamed", false);
 		GetComponent<Animator>().SetBool("IsRefusing", true);
 	}
 
