@@ -6,6 +6,7 @@ public class mixer : MonoBehaviour {
 	private Dictionary<string, int> contents = new Dictionary<string, int>();
 	private bool checkAdding = false;//if should check should or should not add potion
 	private bool canDeliver = false;
+	public GameObject customer;
 	// Use this for initialization
 
 	public void Update()
