@@ -17,13 +17,14 @@ public class DrinkRequirment : MonoBehaviour {
 			++index;
 			//continue the story by the score
 			Debug.Log(score);
-			friendInteract.gaveDrink();
+			friendInteract.gaveDrink(score > 0);
 		}
 		
 	}
 
 	private int CalculatScore(Dictionary<string, int> drink, Dictionary<string, int> required)
 	{
+		/* 
 		int score = 10;
 		foreach(string key in required.Keys)
 		{
@@ -33,15 +34,15 @@ public class DrinkRequirment : MonoBehaviour {
 			}else{
 				score -= required[key];
 			}
-		}
-		return score;
+		}*/
+		return drink["Poison"];
 	}
 
 	private Dictionary<string, int> ToDrinkDict(DrinkInfo drink)
 	//get a dictionary and translate that to a drinkInfo
 	{
 		Dictionary<string, int> info = new Dictionary<string, int>();
-		info.Add("Potion", drink.ingredient1);
+		info.Add("Poison", drink.ingredient1);
 		info.Add("Apple", drink.ingredient2);
 		info.Add("Sth", drink.ingredient3);
 		info.Add("4", drink.ingredient4);

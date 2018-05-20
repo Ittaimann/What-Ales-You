@@ -74,7 +74,7 @@ public class friendInteract : MonoBehaviour {
 
 	//triggered when we hand the customer their drink.
 	//we will start the next block of dialogue.
-	public void gaveDrink()
+	public void gaveDrink(bool hasPoison)
 	{
 		if (drinkCount == 0)
 		{
