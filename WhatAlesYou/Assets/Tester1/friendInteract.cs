@@ -78,7 +78,7 @@ public class friendInteract : MonoBehaviour {
 	{
 		if (drinkCount == 0)
 		{
-			//dialogue gave first drink
+			//dialogue gave first drink to Stephan
 			twinePlayer2.GetComponent<TwineTextPlayer>().AutoDisplay = true;
        		twinePlayer2.GetComponent<TwineTextPlayer>().StartStory = true;
        		background2.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
@@ -89,7 +89,7 @@ public class friendInteract : MonoBehaviour {
 
 		else if (drinkCount == 1)
 		{
-			//dialogue gave second drink
+			//dialogue gave second drink to Gustav
 			twinePlayer3.GetComponent<TwineTextPlayer>().AutoDisplay = true;
        		twinePlayer3.GetComponent<TwineTextPlayer>().StartStory = true;
        		background3.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
@@ -100,7 +100,7 @@ public class friendInteract : MonoBehaviour {
 
 		else if (drinkCount == 2)
 		{
-			//dialogue when giving third drink
+			//dialogue when giving third drink to Stephan
 			twinePlayer4.GetComponent<TwineTextPlayer>().AutoDisplay = true;
        		twinePlayer4.GetComponent<TwineTextPlayer>().StartStory = true;
        		background4.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
@@ -111,6 +111,9 @@ public class friendInteract : MonoBehaviour {
 
 		else //drinkCount >= 3
 		{
+			//if stephan dead: dialogue end
+			//else: give drink dialogue end
+
 			//dialogue when giving final drink drink,*check if object dead
 			twinePlayer5.GetComponent<TwineTextPlayer>().AutoDisplay = true;
        		twinePlayer5.GetComponent<TwineTextPlayer>().StartStory = true;
