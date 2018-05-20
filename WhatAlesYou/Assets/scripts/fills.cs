@@ -10,8 +10,8 @@ public class fills : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gameObject.GetComponent<Renderer>().material.SetFloat("_FillAmount",Random.Range(.15f,.95f));
-        gameObject.GetComponent<Renderer>().material.SetFloat("_Rim", Random.Range(.15f, .95f));
-        gameObject.GetComponent<Renderer>().material.SetFloat("_Rim", Random.Range(.15f, .95f));
+        gameObject.GetComponent<Renderer>().material.SetFloat("_Rim", Random.Range(.01f, .1f));
+        gameObject.GetComponent<Renderer>().material.SetFloat("_Rim", Random.Range(.01f, .1f));
 
     }
 	
