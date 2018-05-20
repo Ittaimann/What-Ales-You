@@ -210,7 +210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &31105847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,17 +222,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169e8bfe10d59d24287078b6db030622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 0}
   story1: {fileID: 548203841}
   story2: {fileID: 1945573996}
+  story3: {fileID: 0}
+  story4: {fileID: 0}
+  story5: {fileID: 0}
+  story6: {fileID: 0}
+  story7: {fileID: 0}
+  story8: {fileID: 0}
+  story9: {fileID: 0}
   twinePlayer1: {fileID: 548203840}
   twinePlayer2: {fileID: 1945573995}
+  twinePlayer3: {fileID: 0}
+  twinePlayer4: {fileID: 0}
+  twinePlayer5: {fileID: 0}
+  twinePlayer6: {fileID: 0}
+  twinePlayer7: {fileID: 0}
+  twinePlayer8: {fileID: 0}
+  twinePlayer9: {fileID: 0}
   background1: {fileID: 548203838}
   background2: {fileID: 1945573993}
+  background3: {fileID: 0}
+  background4: {fileID: 0}
+  background5: {fileID: 0}
+  background6: {fileID: 0}
+  background7: {fileID: 0}
+  background8: {fileID: 0}
+  background9: {fileID: 0}
   customerInteract: 0
   waitingDrink: 0
   isPaused: 0
-  passageOneDone: 0
-  passageTwoRun: 0
 --- !u!65 &31105849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -493,17 +513,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169e8bfe10d59d24287078b6db030622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 1582382027}
   story1: {fileID: 548203841}
   story2: {fileID: 1945573996}
+  story3: {fileID: 0}
+  story4: {fileID: 0}
+  story5: {fileID: 0}
+  story6: {fileID: 0}
+  story7: {fileID: 0}
+  story8: {fileID: 0}
+  story9: {fileID: 0}
   twinePlayer1: {fileID: 548203840}
   twinePlayer2: {fileID: 1945573995}
+  twinePlayer3: {fileID: 0}
+  twinePlayer4: {fileID: 0}
+  twinePlayer5: {fileID: 0}
+  twinePlayer6: {fileID: 0}
+  twinePlayer7: {fileID: 0}
+  twinePlayer8: {fileID: 0}
+  twinePlayer9: {fileID: 0}
   background1: {fileID: 548203838}
   background2: {fileID: 1945573993}
+  background3: {fileID: 0}
+  background4: {fileID: 0}
+  background5: {fileID: 0}
+  background6: {fileID: 0}
+  background7: {fileID: 0}
+  background8: {fileID: 0}
+  background9: {fileID: 0}
   customerInteract: 0
   waitingDrink: 0
   isPaused: 0
-  passageOneDone: 0
-  passageTwoRun: 0
 --- !u!65 &117939331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1944,7 +1984,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22453726, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00000003706533
+      value: -0.000017473567
       objectReference: {fileID: 0}
     - target: {fileID: 11453716, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: StartStory
@@ -5532,7 +5572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750c24c5b1a294b4689d4a6f742a2c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customer: {fileID: 0}
+  customer: {fileID: 117939328}
 --- !u!65 &1582382033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7055,7 +7095,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22453726, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00000003706533
+      value: -0.000017473567
       objectReference: {fileID: 0}
     - target: {fileID: 11471642, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_Horizontal

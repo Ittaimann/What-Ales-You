@@ -103,7 +103,7 @@ public class mixer : MonoBehaviour {
 			GameObject hitObject = hit.transform.gameObject;
             if (hitObject.tag == "Customer")
 			{
- 				GameObject.Find("Manager").GetComponent<DrinkRequirment>().ProcessDrink(GetContent());
+ 				customer.GetComponent<DrinkRequirment>().ProcessDrink(GetContent());
 				CleanContent();	
 				canDeliver = false;
 			}
