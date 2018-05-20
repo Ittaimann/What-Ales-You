@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Cradle;
 
 public class friendInteract : MonoBehaviour {
+	public GameObject mixer;
 	//there are going to be n story objects to transition in twine
 	public Story story1, story2, story3, story4, 
 	story5, story6, story7, story8, story9;
@@ -62,10 +63,10 @@ public class friendInteract : MonoBehaviour {
 			waitingDrink = false;
 		}
 		
-		if (passageTwoRun && background2.GetComponent<RectTransform>().localScale.x != 0.4f)
-		{
-			gaveDrink();
-		}
+		//if (passageTwoRun && background2.GetComponent<RectTransform>().localScale.x != 0.4f)
+		//{
+		//	gaveDrink();
+		//}
 	}
 
 	//triggered when we hand the customer their drink.
@@ -100,8 +101,10 @@ public class friendInteract : MonoBehaviour {
        		//background1.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
 			passageOneDone = false;
 			twinePlayer1.SetActive(false);
+			//enable the mixer to mix drink
+			mixer.GetComponent<mixer>().StartDeliverCheck();
 
-			passageTwoRun = true;
+			//passageTwoRun = true;
 		}
 	}
 }

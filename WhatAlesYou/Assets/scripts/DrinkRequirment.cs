@@ -16,7 +16,7 @@ public class DrinkRequirment : MonoBehaviour {
 			++index;
 			//continue the story by the score
 			Debug.Log(score);
-			//gameObject.GetComponent<friendInteract>();
+			gameObject.GetComponent<friendInteract>().gaveDrink();
 		}
 		
 	}
