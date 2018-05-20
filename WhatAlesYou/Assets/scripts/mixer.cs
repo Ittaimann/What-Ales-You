@@ -5,6 +5,7 @@ using UnityEngine;
 public class mixer : MonoBehaviour {
 	private Dictionary<string, int> contents = new Dictionary<string, int>();
 	private bool checkAdding = false;//if should check should or should not add potion
+	private bool canDeliver = false;
 	// Use this for initialization
 
 	public void Update()
@@ -78,7 +79,16 @@ public class mixer : MonoBehaviour {
 //========================================================================================================
 	public void OnMouseUp()
 	{
-		DeliverDrink();
+		if(canDeliver)
+		{
+			DeliverDrink();
+			canDeliver = false;
+		}
+	}
+
+	public void StartDeliverCheck()
+	{
+		canDeliver = true;
 	}
 
 	private void DeliverDrink()
@@ -88,10 +98,12 @@ public class mixer : MonoBehaviour {
 		GetComponent<Collider>().enabled = false;
         if (Physics.Raycast(ray, out hit)) 
 		{
-            if (hit.transform.gameObject.tag == "Customer")
+			GameObject hitObject = hit.transform.gameObject;
+            if (hitObject.tag == "Customer")
 			{
- 				GetContent();
+ 				GameObject.Find("Manager").GetComponent<DrinkRequirment>().ProcessDrink(GetContent());
 				CleanContent();	
+				canDeliver = false;
 			}
 		}
 		GetComponent<Collider>().enabled = true;
