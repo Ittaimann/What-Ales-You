@@ -22,6 +22,8 @@ public class friendInteract : MonoBehaviour {
 	public bool waitingDrink = false; //if they ordered drink and wait for player
 	public bool isPaused = false;
 
+	int drinkCount = 0;
+
 	private bool passageOneDone = false; //if story 1 is done
 	private bool passageTwoRun = false; // if stroy 2 is running
 	//will need to add more bools here
@@ -73,18 +75,56 @@ public class friendInteract : MonoBehaviour {
 	//we will start the next block of dialogue.
 	public void gaveDrink()
 	{
-		//start next dialogue
-		twinePlayer2.GetComponent<TwineTextPlayer>().AutoDisplay = true;
-       	twinePlayer2.GetComponent<TwineTextPlayer>().StartStory = true;
-       	background2.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
-		story2.Begin();
+		if (drinkCount == 0)
+		{
+			//dialogue gave first drink
+			twinePlayer2.GetComponent<TwineTextPlayer>().AutoDisplay = true;
+       		twinePlayer2.GetComponent<TwineTextPlayer>().StartStory = true;
+       		background2.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
+			story2.Begin();
+
+			drinkCount++;
+		}
+
+		else if (drinkCount == 1)
+		{
+			//dialogue gave second drink
+			twinePlayer3.GetComponent<TwineTextPlayer>().AutoDisplay = true;
+       		twinePlayer3.GetComponent<TwineTextPlayer>().StartStory = true;
+       		background3.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
+			story3.Begin();
+
+			drinkCount++;
+		}
+
+		else if (drinkCount == 2)
+		{
+			//dialogue when giving third drink
+			twinePlayer4.GetComponent<TwineTextPlayer>().AutoDisplay = true;
+       		twinePlayer4.GetComponent<TwineTextPlayer>().StartStory = true;
+       		background4.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
+			story4.Begin();
+
+			drinkCount++;
+		}
+
+		else //drinkCount >= 3
+		{
+			//dialogue when giving final drink drink,*check if object dead
+			twinePlayer5.GetComponent<TwineTextPlayer>().AutoDisplay = true;
+       		twinePlayer5.GetComponent<TwineTextPlayer>().StartStory = true;
+       		background5.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
+			story5.Begin();
+
+		}
+		
+
 	}
 
 
     // Update is called once per frame 
     void Update () {
 		//if the intro block is done
-		Debug.Log(story1.CurrentPassage);
 		if (twinePlayer1.GetComponent<TwineTextPlayer>().StartStory && story1.CurrentPassage.Name == "new" && Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			passageOneDone = true;
@@ -98,12 +138,10 @@ public class friendInteract : MonoBehaviour {
 		{
 			//transitions to the next block of dialogue in game
 
-			//twinePlayer1.GetComponent<TwineTextPlayer>().AutoDisplay = false;
-       		//twinePlayer1.GetComponent<TwineTextPlayer>().StartStory = false;
-       		//background1.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
 			passageOneDone = false;
 			twinePlayer1.SetActive(false);
 			twinePlayer1.GetComponent<TwineTextPlayer>().StartStory = false;
+
 			//enable the mixer to mix drink
 			mixer.GetComponent<mixer>().StartDeliverCheck();
 
