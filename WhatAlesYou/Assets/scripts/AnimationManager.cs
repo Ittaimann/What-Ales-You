@@ -7,7 +7,7 @@ public class AnimationManager : MonoBehaviour {
 	
 	public void Start()
 	{
-		//StartCoroutine(Test());
+		StartCoroutine(Test());
 	}
 
 	public IEnumerator Test()
@@ -21,6 +21,10 @@ public class AnimationManager : MonoBehaviour {
 		Ashamed();
 	}
 
+	public void Walking()
+	{
+		
+	}
 	public void SitDown()
 	{
 		GetComponent<Animator>().SetBool("IsSitting", true);
