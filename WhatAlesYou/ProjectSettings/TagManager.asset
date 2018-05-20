@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Potion
   - Mixer
+  - Customer
   layers:
   - Default
   - TransparentFX
