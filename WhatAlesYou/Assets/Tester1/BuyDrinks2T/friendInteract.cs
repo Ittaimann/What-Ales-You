@@ -52,55 +52,41 @@ public class friendInteract : MonoBehaviour {
 			isPaused = false;
 			waitingDrink = false;
 		}
-
+		
+		if (passageTwoRun)
+		{
+			gaveDrink();
+		}
 	}
 
-/*
-   void enterOrder()
-   {
-       isPaused = true;
+	void gaveDrink()
+	{
+		//start next dialogue
+		twinePlayer2.GetComponent<TwineTextPlayer>().AutoDisplay = true;
+       	twinePlayer2.GetComponent<TwineTextPlayer>().StartStory = true;
+       	background2.GetComponent<RectTransform>().localScale = new Vector3(0.8f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
+		story2.Begin();
+	}
 
-       //pauses the dialogue, and removes UI elements to allow for drink mixing gameplay
-       twinePlayer1.GetComponent<TwineTextPlayer>().AutoDisplay = false;
-       twinePlayer1.GetComponent<TwineTextPlayer>().StartStory = false;
-       twinePlayer1.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
-
-       waitingDrink = true;
-   }
-
-   void giveDrink()
-   {
-       isPaused = false;
-
-       //resumes game when player gives customer the drink
-       twinePlayer1.GetComponent<TwineTextPlayer>().AutoDisplay = true;
-       twinePlayer1.GetComponent<TwineTextPlayer>().StartStory = true;
-       twinePlayer1.GetComponent<RectTransform>().localScale = new Vector3(0.8f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
-
-   }
-*/
 
     // Update is called once per frame 
     void Update () {
 		if (story1.CurrentPassage.Name == "Order Up" && Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			passageOneDone = true;
-			Debug.Log("Hello");
-			
 		}
 
 		if (passageOneDone)
 		{
-			passageTwoRun = true;
-			twinePlayer1.GetComponent<TwineTextPlayer>().AutoDisplay = false;
-       		twinePlayer1.GetComponent<TwineTextPlayer>().StartStory = false;
-       		background1.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
-			passageOneDone = false;
+			//transitions to the next block of dialogue in game
 
-			twinePlayer2.GetComponent<TwineTextPlayer>().AutoDisplay = true;
-       		twinePlayer2.GetComponent<TwineTextPlayer>().StartStory = true;
-       		background2.GetComponent<RectTransform>().localScale = new Vector3(0.8f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
-			story2.Begin();
+			//twinePlayer1.GetComponent<TwineTextPlayer>().AutoDisplay = false;
+       		//twinePlayer1.GetComponent<TwineTextPlayer>().StartStory = false;
+       		//background1.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+			passageOneDone = false;
+			twinePlayer1.SetActive(false);
+
+			passageTwoRun = true;
 		}
 	}
 }
