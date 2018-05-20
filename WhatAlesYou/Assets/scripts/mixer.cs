@@ -101,7 +101,7 @@ public class mixer : MonoBehaviour {
         if (Physics.Raycast(ray, out hit)) 
 		{
 			GameObject hitObject = hit.transform.gameObject;
-            if (hitObject.tag == "Customer")
+            if (hitObject == customer)
 			{
  				customer.GetComponent<DrinkRequirment>().ProcessDrink(GetContent());
 				CleanContent();	
@@ -110,5 +110,10 @@ public class mixer : MonoBehaviour {
 		}
 		GetComponent<Collider>().enabled = true;
 	}
+
+    public void ChangeCustomer(GameObject newCustomer)
+    {
+        customer = newCustomer;
+    }
 
 }

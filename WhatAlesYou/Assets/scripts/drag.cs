@@ -38,9 +38,10 @@ public class drag : MonoBehaviour {
 				//{
 				Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 				cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
-				transform.position += (cursorPosition - transform.position)/20;
-				//}
-				break;
+				transform.position += (cursorPosition - transform.position)/10;
+                //transform.position = Vector3.MoveTowards(transform.position, cursorPosition, 0.1f);
+                //}
+                break;
 				
 			}
 
