@@ -15,7 +15,7 @@ public class lightflux : MonoBehaviour {
 
 	void Update()
 	{
-		Debug.Log((1+Mathf.Sin(Time.time))/2);
+		//Debug.Log((1+Mathf.Sin(Time.time))/2);
 		lg.intensity=Mathf.Lerp(70,20, (1 + Mathf.Sin(Time.time)) / 2);
 	}
 }

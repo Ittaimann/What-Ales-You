@@ -59,7 +59,7 @@ public class mixer : MonoBehaviour {
 
 	public void OnTriggerStay(Collider other)
 	{
-		if(checkAdding && other.gameObject.GetComponent<drag>().GetStatus() == DragingStatus.returning)
+		if(checkAdding && other.tag == "Potion" && other.gameObject.GetComponent<drag>().GetStatus() == DragingStatus.returning)
 		//Potion starts to return, means mouse up, add that to mixer and change potion's state
 		{
 			checkAdding = false;
