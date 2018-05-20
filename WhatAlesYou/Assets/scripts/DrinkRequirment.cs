@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DrinkRequirment : MonoBehaviour {
+	public friendInteract friendInteract;
 	public DrinkInfo[] quests;
 	private int index = 0;
 	// Use this for initialization
@@ -16,7 +17,7 @@ public class DrinkRequirment : MonoBehaviour {
 			++index;
 			//continue the story by the score
 			Debug.Log(score);
-			gameObject.GetComponent<friendInteract>().gaveDrink();
+			friendInteract.gaveDrink();
 		}
 		
 	}
