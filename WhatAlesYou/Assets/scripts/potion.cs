@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class potion : MonoBehaviour {
 	public string content;
-	// Use this for initialization
-	
-	
+    public AudioClip hitSE;
+    // Use this for initialization
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        AudioSource.PlayClipAtPoint(hitSE, transform.position);
+    }
+
 }

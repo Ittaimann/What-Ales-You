@@ -7,6 +7,11 @@ public class mixer : MonoBehaviour {
 	private bool checkAdding = false;//if should check should or should not add potion
 	private bool canDeliver = false;
 	public GameObject customer;
+    //audios
+    //public GameObject theCamera;
+    public AudioClip mixingSE;
+    public AudioClip deliverSE;
+    //public AudioClip collideSE;
 	// Use this for initialization
 
 	public void Update()
@@ -25,6 +30,7 @@ public class mixer : MonoBehaviour {
 			contents.Add(contentName, 0);
 		}
 		++contents[contentName];
+        AudioSource.PlayClipAtPoint(mixingSE, transform.position);
 	}
 	public void CleanContent()
 	{
@@ -56,6 +62,11 @@ public class mixer : MonoBehaviour {
 		{
 			checkAdding = true;
 		}
+        /*
+        if(other.gameObject.name == "Bar")
+        {
+            AudioSource.PlayClipAtPoint(collideSE, transform.position);
+        }*/
 	}
 
 	public void OnTriggerStay(Collider other)
@@ -101,14 +112,20 @@ public class mixer : MonoBehaviour {
         if (Physics.Raycast(ray, out hit)) 
 		{
 			GameObject hitObject = hit.transform.gameObject;
-            if (hitObject.tag == "Customer")
+            if (hitObject == customer)
 			{
  				customer.GetComponent<DrinkRequirment>().ProcessDrink(GetContent());
-				CleanContent();	
+                AudioSource.PlayClipAtPoint(deliverSE, transform.position);
+                CleanContent();	
 				canDeliver = false;
 			}
 		}
 		GetComponent<Collider>().enabled = true;
 	}
+
+    public void ChangeCustomer(GameObject newCustomer)
+    {
+        customer = newCustomer;
+    }
 
 }
