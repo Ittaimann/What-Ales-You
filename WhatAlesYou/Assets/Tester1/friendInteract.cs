@@ -84,7 +84,8 @@ public class friendInteract : MonoBehaviour {
     // Update is called once per frame 
     void Update () {
 		//if the intro block is done
-		if (story1.CurrentPassage.Name == "Order Up" && Input.GetKeyDown(KeyCode.Mouse0))
+		Debug.Log(story1.CurrentPassage);
+		if (twinePlayer1.GetComponent<TwineTextPlayer>().StartStory && story1.CurrentPassage.ToString() == "new" && Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			passageOneDone = true;
 		}

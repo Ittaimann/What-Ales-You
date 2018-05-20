@@ -95,7 +95,7 @@ public class mixer : MonoBehaviour {
 		if(canDeliver)
 		{
 			DeliverDrink();
-			canDeliver = false;
+			//canDeliver = false;
 		}
 	}
 
