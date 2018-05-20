@@ -10,7 +10,7 @@ public enum Direction
 public class AnimationManager : MonoBehaviour {
 	public void Start()
 	{
-
+	
 	}
 
 	public IEnumerator Test()

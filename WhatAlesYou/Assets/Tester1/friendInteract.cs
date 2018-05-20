@@ -88,6 +88,7 @@ public class friendInteract : MonoBehaviour {
 		if (twinePlayer1.GetComponent<TwineTextPlayer>().StartStory && story1.CurrentPassage.Name == "new" && Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			passageOneDone = true;
+			gameObject.GetComponent<AnimationManager>().RotateAndWalk(0, Direction.right, 1);
 		}
 
 
@@ -102,6 +103,7 @@ public class friendInteract : MonoBehaviour {
        		//background1.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
 			passageOneDone = false;
 			twinePlayer1.SetActive(false);
+			twinePlayer1.GetComponent<TwineTextPlayer>().StartStory = false;
 			//enable the mixer to mix drink
 			mixer.GetComponent<mixer>().StartDeliverCheck();
 
