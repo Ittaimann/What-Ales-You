@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Cradle;
 
 public class friendInteract : MonoBehaviour {
+	public GameObject steve, gus;
 	public GameObject mixer;
 	//there are going to be n story objects to transition in twine
 	public Story story1, story2, story3, story4, 
@@ -88,7 +89,8 @@ public class friendInteract : MonoBehaviour {
 		if (twinePlayer1.GetComponent<TwineTextPlayer>().StartStory && story1.CurrentPassage.Name == "new" && Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			passageOneDone = true;
-			gameObject.GetComponent<AnimationManager>().RotateAndWalk(0, Direction.right, 1);
+			steve.GetComponent<AnimationManager>().RotateAndWalk(0, Direction.right, 2);
+			gus.GetComponent<AnimationManager>().RotateAndWalk(0, Direction.left, 2);
 		}
 
 
