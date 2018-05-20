@@ -496,6 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d750761c2350c42be974f6e8e438c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  friendInteract: {fileID: 0}
   quests:
   - ingredient1: 1
     ingredient2: 1
@@ -1985,7 +1986,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22453726, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000029766652
+      value: 0.000015255252
       objectReference: {fileID: 0}
     - target: {fileID: 11453716, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: StartStory
@@ -7173,7 +7174,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22453726, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000030517578
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 11471642, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_Horizontal

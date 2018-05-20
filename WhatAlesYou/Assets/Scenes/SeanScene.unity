@@ -1964,7 +1964,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22453726, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 11453718, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_Color.r
@@ -2131,7 +2131,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07bea421c6534f94cb3924fd0ce8f677, type: 2}
+  - {fileID: 2100000, guid: 3426a3a8695bf0749b9f5b710d4dc765, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2157,7 +2158,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519004442}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: c338f0b2ac85c74428e9208091d34bde, type: 3}
 --- !u!1001 &563788887
 Prefab:
   m_ObjectHideFlags: 0
@@ -2787,7 +2788,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07bea421c6534f94cb3924fd0ce8f677, type: 2}
+  - {fileID: 2100000, guid: 15250dc26f97c2644b4663e16341ab21, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2813,7 +2815,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 672359132}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: c338f0b2ac85c74428e9208091d34bde, type: 3}
 --- !u!1 &674523882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,6 +2949,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169e8bfe10d59d24287078b6db030622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  steve: {fileID: 0}
+  gus: {fileID: 0}
   mixer: {fileID: 0}
   story1: {fileID: 1483610847}
   story2: {fileID: 847010776}
@@ -3006,11 +3010,9 @@ GameObject:
   - component: {fileID: 757684107}
   - component: {fileID: 757684105}
   - component: {fileID: 757684104}
-  - component: {fileID: 757684108}
-  - component: {fileID: 757684106}
   m_Layer: 0
   m_Name: steverig2
-  m_TagString: Customer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3034,52 +3036,10 @@ BoxCollider:
   m_GameObject: {fileID: 757684103}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.040071208, y: 0.06555318, z: 0.024029844}
   m_Center: {x: 0.0004408427, y: 0.034831088, z: 0.00059845747}
---- !u!114 &757684106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 757684103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 169e8bfe10d59d24287078b6db030622, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 913363140}
-  story1: {fileID: 1659098749}
-  story2: {fileID: 175368064}
-  story3: {fileID: 0}
-  story4: {fileID: 0}
-  story5: {fileID: 0}
-  story6: {fileID: 0}
-  story7: {fileID: 0}
-  story8: {fileID: 0}
-  story9: {fileID: 0}
-  twinePlayer1: {fileID: 1659098747}
-  twinePlayer2: {fileID: 175368062}
-  twinePlayer3: {fileID: 0}
-  twinePlayer4: {fileID: 0}
-  twinePlayer5: {fileID: 0}
-  twinePlayer6: {fileID: 0}
-  twinePlayer7: {fileID: 0}
-  twinePlayer8: {fileID: 0}
-  twinePlayer9: {fileID: 0}
-  background1: {fileID: 148130420}
-  background2: {fileID: 1426355362}
-  background3: {fileID: 0}
-  background4: {fileID: 0}
-  background5: {fileID: 0}
-  background6: {fileID: 0}
-  background7: {fileID: 0}
-  background8: {fileID: 0}
-  background9: {fileID: 0}
-  customerInteract: 0
-  waitingDrink: 0
-  isPaused: 0
 --- !u!95 &757684107
 Animator:
   serializedVersion: 3
@@ -3099,24 +3059,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &757684108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 757684103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70d750761c2350c42be974f6e8e438c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  friendInteract: {fileID: 757684106}
-  quests:
-  - ingredient1: 0
-    ingredient2: 0
-    ingredient3: 0
-    ingredient4: 0
-    ingredient5: 0
 --- !u!1 &792077543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3992,7 +3934,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07bea421c6534f94cb3924fd0ce8f677, type: 2}
+  - {fileID: 2100000, guid: 6ca29110b477fef46961bea2cae564d3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4018,7 +3961,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 911253656}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: c338f0b2ac85c74428e9208091d34bde, type: 3}
 --- !u!1 &913363140
 GameObject:
   m_ObjectHideFlags: 0
@@ -7102,7 +7045,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07bea421c6534f94cb3924fd0ce8f677, type: 2}
+  - {fileID: 2100000, guid: 428cc06b69405e640ad2928b0c3fc2a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7128,7 +7072,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1408408593}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: c338f0b2ac85c74428e9208091d34bde, type: 3}
 --- !u!1001 &1423721169
 Prefab:
   m_ObjectHideFlags: 0
@@ -7138,7 +7082,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 7195adf036bc1e144933bbdea6f004fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.4
+      value: 9.24
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7195adf036bc1e144933bbdea6f004fc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7190,11 +7134,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7195adf036bc1e144933bbdea6f004fc, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: 7195adf036bc1e144933bbdea6f004fc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195adf036bc1e144933bbdea6f004fc, type: 3}
@@ -7747,7 +7691,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22453726, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000002764836
+      value: 0.000015920266
       objectReference: {fileID: 0}
     - target: {fileID: 11453718, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_Color.a
@@ -7801,6 +7745,111 @@ Transform:
   m_Father: {fileID: 1983856970}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1528211349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1528211350}
+  - component: {fileID: 1528211351}
+  - component: {fileID: 1528211352}
+  - component: {fileID: 1528211353}
+  m_Layer: 0
+  m_Name: Customer Collider
+  m_TagString: Customer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1528211350
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1528211349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1937251232}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1528211351
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1528211349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.928859, y: 7.017968, z: 1.4880629}
+  m_Center: {x: 0.5691365, y: 0.93302774, z: -3.2282085}
+--- !u!114 &1528211352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1528211349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d750761c2350c42be974f6e8e438c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friendInteract: {fileID: 1528211353}
+  quests:
+  - ingredient1: 1
+    ingredient2: 1
+    ingredient3: 1
+    ingredient4: 1
+    ingredient5: 1
+--- !u!114 &1528211353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1528211349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169e8bfe10d59d24287078b6db030622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steve: {fileID: 757684103}
+  gus: {fileID: 1423721170}
+  mixer: {fileID: 913363140}
+  story1: {fileID: 1659098749}
+  story2: {fileID: 175368064}
+  story3: {fileID: 0}
+  story4: {fileID: 0}
+  story5: {fileID: 0}
+  story6: {fileID: 0}
+  story7: {fileID: 0}
+  story8: {fileID: 0}
+  story9: {fileID: 0}
+  twinePlayer1: {fileID: 1659098747}
+  twinePlayer2: {fileID: 175368062}
+  twinePlayer3: {fileID: 0}
+  twinePlayer4: {fileID: 0}
+  twinePlayer5: {fileID: 0}
+  twinePlayer6: {fileID: 0}
+  twinePlayer7: {fileID: 0}
+  twinePlayer8: {fileID: 0}
+  twinePlayer9: {fileID: 0}
+  background1: {fileID: 148130420}
+  background2: {fileID: 1426355362}
+  background3: {fileID: 0}
+  background4: {fileID: 0}
+  background5: {fileID: 0}
+  background6: {fileID: 0}
+  background7: {fileID: 0}
+  background8: {fileID: 0}
+  background9: {fileID: 0}
+  customerInteract: 0
+  waitingDrink: 0
+  isPaused: 0
 --- !u!1 &1531641527
 GameObject:
   m_ObjectHideFlags: 0
@@ -8070,6 +8119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169e8bfe10d59d24287078b6db030622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  steve: {fileID: 0}
+  gus: {fileID: 0}
   mixer: {fileID: 913363140}
   story1: {fileID: 627697194}
   story2: {fileID: 914112981}
@@ -8261,7 +8312,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07bea421c6534f94cb3924fd0ce8f677, type: 2}
+  - {fileID: 2100000, guid: 15250dc26f97c2644b4663e16341ab21, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8287,7 +8339,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1620423931}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: c338f0b2ac85c74428e9208091d34bde, type: 3}
 --- !u!1 &1634013082
 GameObject:
   m_ObjectHideFlags: 0
@@ -9525,6 +9577,7 @@ Transform:
   - {fileID: 96878933}
   - {fileID: 757684102}
   - {fileID: 1423721173}
+  - {fileID: 1528211350}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
