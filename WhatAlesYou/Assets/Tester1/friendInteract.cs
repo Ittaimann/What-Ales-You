@@ -51,6 +51,9 @@ public class friendInteract : MonoBehaviour {
 			}
 		}
 
+		//if the customer is waiting on on their drink.
+		//for the purpose of this test, we trigger new dialogue by clicking.
+		//Ideally these flags would trigger when handing the customer their drink.
 		if (waitingDrink)
 		{
 			isPaused = false;
@@ -63,6 +66,8 @@ public class friendInteract : MonoBehaviour {
 		}
 	}
 
+	//triggered when we hand the customer their drink.
+	//we will start the next block of dialogue.
 	void gaveDrink()
 	{
 		//start next dialogue
@@ -75,11 +80,13 @@ public class friendInteract : MonoBehaviour {
 
     // Update is called once per frame 
     void Update () {
+		//if the intro block is done
 		if (story1.CurrentPassage.Name == "Order Up" && Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			passageOneDone = true;
 		}
 
+		//we finished the intro block, moving onto the next block of dialogue.
 		if (passageOneDone)
 		{
 			//transitions to the next block of dialogue in game
