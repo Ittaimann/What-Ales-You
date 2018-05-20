@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+public enum Direction
+{
+	left,
+	right
+}
 public class AnimationManager : MonoBehaviour {
-	
 	public void Start()
 	{
-		StartCoroutine(Test());
+
 	}
 
 	public IEnumerator Test()
@@ -21,9 +24,20 @@ public class AnimationManager : MonoBehaviour {
 		Ashamed();
 	}
 
-	public void Walking()
+	public void RotateAndWalk(float time1, Direction direction, float time2)
 	{
-		
+		StartCoroutine(Rotating(time1, direction, time2));
+	}
+
+	/* 
+	public void Rotate(Direction direction)
+	{
+		StartCoroutine(Rotating(0,direction,0));
+	}*/
+
+	public void WalkForward(float time)
+	{
+		StartCoroutine(Trigger("IsWalking", time));
 	}
 	public void SitDown()
 	{
@@ -87,11 +101,31 @@ public class AnimationManager : MonoBehaviour {
 
 	}
 
-	public IEnumerator Trigger(string name, float time)
+	private IEnumerator Trigger(string name, float time)
 	{
 		GetComponent<Animator>().SetBool(name, true);
 		yield return new WaitForSeconds(time);
 		GetComponent<Animator>().SetBool(name, false);
+	}
+
+	private IEnumerator Rotating(float beforeWalkTime, Direction direction, float afterWalkTime)
+	{
+		if(beforeWalkTime != 0)
+			yield return Trigger("IsWalking", beforeWalkTime);
+		Vector3 unit = new Vector3(0,1,0);
+		if(direction == Direction.left)
+		{
+			unit = new Vector3(0,-1,0);
+		}
+
+		for(int x = 0; x< 90; ++x)
+		{
+			transform.Rotate(unit);
+			yield return new WaitForSeconds(0.01f);
+		}
+
+		if(afterWalkTime != 0)
+			yield return Trigger("IsWalking", afterWalkTime);
 	}
 
 }
