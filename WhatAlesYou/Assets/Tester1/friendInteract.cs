@@ -26,7 +26,8 @@ public class friendInteract : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		background1.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+		background2.GetComponent<RectTransform>().localScale = new Vector3(0.0f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
 	}
 
 	//when u click on friend, this object will pop up the dialogue.
@@ -42,7 +43,7 @@ public class friendInteract : MonoBehaviour {
 			//code block that pops up dialogue and runs twine dialogue.
 			twinePlayer1.GetComponent<TwineTextPlayer>().AutoDisplay = true;
 			twinePlayer1.GetComponent<TwineTextPlayer>().StartStory = true;
-			background1.GetComponent<RectTransform>().localScale = new Vector3(0.8f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
+			background1.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background1.GetComponent<RectTransform>().localScale.y, background1.GetComponent<RectTransform>().localScale.z);
 
 			//start the beginning of the story when click player
 			if (twinePlayer1.GetComponent<TwineTextPlayer>().AutoDisplay)
@@ -60,7 +61,7 @@ public class friendInteract : MonoBehaviour {
 			waitingDrink = false;
 		}
 		
-		if (passageTwoRun)
+		if (passageTwoRun && background2.GetComponent<RectTransform>().localScale.x != 0.4f)
 		{
 			gaveDrink();
 		}
@@ -73,7 +74,7 @@ public class friendInteract : MonoBehaviour {
 		//start next dialogue
 		twinePlayer2.GetComponent<TwineTextPlayer>().AutoDisplay = true;
        	twinePlayer2.GetComponent<TwineTextPlayer>().StartStory = true;
-       	background2.GetComponent<RectTransform>().localScale = new Vector3(0.8f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
+       	background2.GetComponent<RectTransform>().localScale = new Vector3(0.4f, background2.GetComponent<RectTransform>().localScale.y, background2.GetComponent<RectTransform>().localScale.z);
 		story2.Begin();
 	}
 
@@ -86,7 +87,9 @@ public class friendInteract : MonoBehaviour {
 			passageOneDone = true;
 		}
 
+
 		//we finished the intro block, moving onto the next block of dialogue.
+		//for effeciency, turn this block into a switch statement. (Maybe)
 		if (passageOneDone)
 		{
 			//transitions to the next block of dialogue in game
