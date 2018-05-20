@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 699315164}
   - component: {fileID: 699315163}
   - component: {fileID: 699315167}
+  - component: {fileID: 699315168}
   m_Layer: 5
   m_Name: friendCube
   m_TagString: Friend
@@ -215,6 +216,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ed657af1bd0e764f82cbb28f42a222c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &699315168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699315162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169e8bfe10d59d24287078b6db030622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   story1: {fileID: 1483610847}
